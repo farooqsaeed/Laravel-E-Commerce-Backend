@@ -14,3 +14,46 @@ This open-source Laravel E-Commerce Backend provides a solid foundation for buil
 - Shopping cart functionality.
 - Review and rating system for products.
 - API endpoints for easy integration with frontend applications.
+
+
+## API Documentation
+
+#### Signup
+
+```http
+  POST /api/auth/login
+```
+
+| Body | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name` | `string` | **Required**. The name of the user |
+| `email` | `string` | **Required**. A valid email address |
+| `password` | `string` | **Required**. A password with a minimum of 8 characters |
+| `address` | `string` | **Optional**. The user's address |
+| `city` | `string` | **Optional**. The city where the user resides |
+| `state` | `string` | **Optional**. The state where the user resides |
+| `country` | `string` | **Optional**.The country where the user resides |
+| `postal_code` | `string` | **Optional**. The postal code of the user's address. |
+
+#### POST login
+
+```http
+  GET /api/auth/login
+```
+
+| Body | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `email`      | `string` | **Required**. The email address of the user |
+| `password`      | `string` | **Required**. The user's password |
+
+#### POST logout
+
+```http
+  POST /api/auth/logout
+```
+
+| Header | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `Authorization`      | `string` | **Required**. Bearer token for authentication. Format: `Bearer {token}` |
+
+
