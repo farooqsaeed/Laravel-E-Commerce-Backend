@@ -17,8 +17,6 @@ return new class extends Migration
             $table->decimal('total_amount', 10, 2);
             $table->enum('status', ['pending', 'processing', 'completed', 'cancelled', 'shipped', 'delivered', 'returned', 'refunded', 'on_hold', 'backordered'])->default('pending');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
